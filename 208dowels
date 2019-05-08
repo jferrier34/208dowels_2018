@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+import sys
+from math import *
+
+def do_all():
+    print("")
+
+def help():
+    print("USAGE\n\t./208dowels 00 01 02 03 04 05 06 07 08\n")
+    print("DESCRIPTION\n\tOi\tsize of the observed class")
+    exit(0)
+
+def check_error():
+    if (sys.argv[1] == "-h"):
+        help()
+
+def main():
+    if (len(sys.argv) < 2):
+        exit(84)
+    check_error()
+    do_all()
+
+if __name__ == '__main__':
+    main()
