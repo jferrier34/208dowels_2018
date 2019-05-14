@@ -3,7 +3,32 @@ import sys
 from math import *
 
 def do_all():
-    print("")
+    i = 1
+    p = 0.0
+    tot = 0
+    my_tab = list()
+    while (i < 10):
+        nb = int(sys.argv[i])
+        my_tab.append(int(sys.argv[i]))
+        i+=1
+    i = 0
+    while (i < 9):
+        tot+=my_tab[i]
+        i+=1
+    if (tot != 100):
+        exit(84)
+    i = 0
+    while (i < 9):
+        p+=i * my_tab[i] * 1.0
+        i+=1
+    p = p / 10000 * 1.0
+    print("x\t|0-1\t|2\t|3\t|4\t|5\t|6\t|7+\t|total")
+    print("Ox\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("Tx\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("distribution:\t\t\tB(100, %0.3f)" %(p))
+    print("sum of the square differences:\t%0.3f" %(0.0))
+    print("freedom degrees:\t\t%d" %(8))
+    print("fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
 
 def help():
     print("USAGE\n\t./208dowels 00 01 02 03 04 05 06 07 08\n")
@@ -13,12 +38,29 @@ def help():
 def check_error():
     if (sys.argv[1] == "-h"):
         help()
+    if (len(sys.argv) != 10):
+        exit(84)
+    try:
+        nb1 = int(sys.argv[1])
+        nb2 = int(sys.argv[2])
+        nb3 = int(sys.argv[3])
+        nb4 = int(sys.argv[4])
+        nb5 = int(sys.argv[5])
+        nb6 = int(sys.argv[6])
+        nb7 = int(sys.argv[7])
+        nb8 = int(sys.argv[8])
+        nb9 = int(sys.argv[9])
+    except:
+        exit(84)
+    if (nb1 < 0 or nb2 < 0 or nb3 < 0 or nb4 < 0 or nb5 < 0 or nb6 < 0 or nb7 < 0 or nb8 < 0 or nb9 < 0):
+        exit(84)
 
 def main():
     if (len(sys.argv) < 2):
         exit(84)
     check_error()
     do_all()
+    exit(0)
 
 if __name__ == '__main__':
     main()
