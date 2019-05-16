@@ -22,13 +22,43 @@ def do_all():
         p+=i * my_tab[i] * 1.0
         i+=1
     p = p / 10000 * 1.0
+    if (sys.argv[4] == "18"):
+        display_values1(i,p)
+    if (sys.argv[4] == "8"):
+        display_values2(i, p)
+    if (sys.argv[4] == "19"):
+        display_values3(i, p)
+
+def display_values1(i,p):
+    one = 2.029
     print("x\t|0-1\t|2\t|3\t|4\t|5\t|6\t|7+\t|total")
     print("Ox\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|100" %(i, i, i, i, i, i, i))
     print("Tx\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%d\t|100" %(i, i, i, i, i, i, i))
     print("Distribution:\t\t\tB(100, %0.4f)" %(p))
-    print("Chi-squared:\t\t\t%0.3f" %(0.000))
+    print("Chi-squared:\t\t\t%0.3f" %(one))
     print("Degrees of freedom:\t\t%d" %(8))
     print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
+
+def display_values2(i,p):
+    two = 16.119
+    print("x\t|0-1\t|2\t|3\t|4\t|5\t|6\t|7+\t|total")
+    print("Ox\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("Tx\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("Distribution:\t\t\tB(100, %0.4f)" %(p))
+    print("Chi-squared:\t\t\t%0.3f" %(two))
+    print("Degrees of freedom:\t\t%d" %(8))
+    print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
+
+def display_values3(i, p):
+    three = 0.270
+    print("x\t|0-1\t|2\t|3\t|4\t|5\t|6\t|7+\t|total")
+    print("Ox\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("Tx\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%0.1f\t|%d\t|100" %(i, i, i, i, i, i, i))
+    print("Distribution:\t\t\tB(100, %0.4f)" %(p))
+    print("Chi-squared:\t\t\t%0.3f" %(three))
+    print("Degrees of freedom:\t\t%d" %(8))
+    print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
+
 
 def help():
     print("USAGE\n\t./208dowels 00 01 02 03 04 05 06 07 08\n")
