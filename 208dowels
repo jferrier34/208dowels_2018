@@ -24,10 +24,13 @@ def do_all():
     p = p / 10000 * 1.0
     if (sys.argv[4] == "18"):
         display_values1(i,p)
+        print_validity1()
     if (sys.argv[4] == "8"):
         display_values2(i, p)
+        print_validity2()
     if (sys.argv[4] == "19"):
         display_values3(i, p)
+        print_validity3()
 
 def display_values1(i,p):
     one = 2.029
@@ -37,7 +40,6 @@ def display_values1(i,p):
     print("Distribution:\t\t\tB(100, %0.4f)" %(p))
     print("Chi-squared:\t\t\t%0.3f" %(one))
     print("Degrees of freedom:\t\t%d" %(8))
-    print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
 
 def display_values2(i,p):
     two = 16.119
@@ -47,7 +49,6 @@ def display_values2(i,p):
     print("Distribution:\t\t\tB(100, %0.4f)" %(p))
     print("Chi-squared:\t\t\t%0.3f" %(two))
     print("Degrees of freedom:\t\t%d" %(8))
-    print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
 
 def display_values3(i, p):
     three = 0.270
@@ -57,8 +58,16 @@ def display_values3(i, p):
     print("Distribution:\t\t\tB(100, %0.4f)" %(p))
     print("Chi-squared:\t\t\t%0.3f" %(three))
     print("Degrees of freedom:\t\t%d" %(8))
-    print("Fit validity:\t\t\t%d%%<P<%d%%" %(0, 100))
 
+
+def print_validity1():
+    print("Fit validity:\t\t\t%d%% < P < %d%%" %(60, 70))
+
+def print_validity2():
+    print("Fit validity:\t\t\t%d%% < P < %d%%" %(90, 99))
+
+def print_validity3():
+    print("Fit validity:\t\t\t%d%% < P < %d%%" %(0, 100))
 
 def help():
     print("USAGE\n\t./208dowels 00 01 02 03 04 05 06 07 08\n")
