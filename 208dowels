@@ -59,13 +59,13 @@ def display_values3():
 
 
 def print_validity1():
-    print("Fit validity:\t\t\t%d%% < P < %d%%" %(60, 70))
+    print("Fit validity:\t\t\t%d%%<P<%d%%" %(60, 70))
 
 def print_validity2():
-    print("Fit validity:\t\t\t%d%% < P < %d%%" %(90, 99))
+    print("Fit validity:\t\t\t%d%%<P<%d%%" %(90, 99))
 
 def print_validity3():
-    print("Fit validity:\t\t\tP < %d%%" %(1))
+    print("Fit validity:\t\t\tP<%d%%" %(1))
 
 def help():
     print("USAGE\n\t./208dowels 00 01 02 03 04 05 06 07 08\n")
