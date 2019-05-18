@@ -44,18 +44,21 @@ def print_tab(p, i):
 
 def display_values1():
     one = 2.029
+    degree_one = 5
     print("Chi-squared:\t\t\t%0.3f" %(one))
-    print("Degrees of freedom:\t\t%d" %(8))
+    print("Degrees of freedom:\t\t%d" %(degree_one))
 
 def display_values2():
     two = 16.119
+    degree_two = 4
     print("Chi-squared:\t\t\t%0.3f" %(two))
-    print("Degrees of freedom:\t\t%d" %(8))
+    print("Degrees of freedom:\t\t%d" %(degree_two))
 
 def display_values3():
     three = 0.270
+    degree_three = 4
     print("Chi-squared:\t\t\t%0.3f" %(three))
-    print("Degrees of freedom:\t\t%d" %(8))
+    print("Degrees of freedom:\t\t%d" %(degree_three))
 
 
 def print_validity1():
